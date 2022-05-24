@@ -3,7 +3,6 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -11,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
+    MemberService memberService = new MemberService(memberRepository);
     MemoryMemberRepository memberRepository = new MemoryMemberRepository();
     // memberservice에서 만든거랑 다른거임 그래서 문제가 좀 있음
 
